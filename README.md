@@ -5,7 +5,7 @@ Proyecto react creado con vitejs.
 ## Intrucciones
 
 - Clonar el repo
-- Ejecutar *npm init* dentro del folder del repo clonado
+- Ejecutar *npm install* dentro del folder del repo clonado
 
 ## Scripts disponibles
 - *npm run dev* para lanzar el bundling y server local

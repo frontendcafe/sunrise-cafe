@@ -6,6 +6,7 @@ Proyecto react creado con vitejs.
 
 - Clonar el repo
 - Ejecutar *npm install* dentro del folder del repo clonado
+- Instalar la extensión VSCode: ESLint.
 
 ## Scripts disponibles
 - *npm run dev* para lanzar el bundling y server local

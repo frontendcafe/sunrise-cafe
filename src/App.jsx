@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TestSC from './pages/TestSC';
+import TestSC from './molecules/TestSC';
 import AppRouter from './routers/AppRouter';
 
 function App() {

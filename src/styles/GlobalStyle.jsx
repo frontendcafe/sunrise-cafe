@@ -7,6 +7,21 @@ const GlobalStyle = () => {
     <Global
       styles={css`
         ${emotionNormalize}
+
+        /* box-sizing and rem setters */
+        html {
+          box-sizing: border-box;
+          font-size: 62.5%;
+        }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+
+        body {
+        }
       `}
     />
   );

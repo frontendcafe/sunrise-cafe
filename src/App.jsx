@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TestSC from './molecules/TestSC';
+import Tipography from './molecules/Tipography';
 import AppRouter from './routers/AppRouter';
 import GlobalStyle from './styles/GlobalStyle';
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
-        <TestSC />
+        <Tipography />
         <AppRouter />
       </div>
     </>

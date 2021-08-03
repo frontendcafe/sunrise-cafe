@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 
 import colors from '../styles/colors';
 
-const Price = styled.p`
-  font-size: 2.4rem;
-  font-weight: 800;
+const Link = styled.a`
+  font-size: 1.6rem;
+  font-weight: 400;
   line-height: 1.8rem;
   letter-spacing: 0px;
-  color: ${colors.primary};
+  color: ${colors.dark};
 `;
 
-export default Price;
+export default Link;

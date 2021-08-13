@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import colors from "../styles/colors";
-import fonts from "../styles/fonts";
+import styled from '@emotion/styled';
+import colors from '../styles/colors';
+import fonts from '../styles/fonts';
 
 const TextInfo = styled.p`
   color: ${colors.blue};

@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import colors from "../styles/colors";
+import styled from '@emotion/styled';
+import colors from '../styles/colors';
 
 const OrderTotals = styled.p`
   color: ${colors.blue};

@@ -13,4 +13,5 @@ export default {
   secondary: wordsColor.crema,
   light: wordsColor.blanco,
   dark: wordsColor.negro,
+  blue: wordsColor.azul
 };

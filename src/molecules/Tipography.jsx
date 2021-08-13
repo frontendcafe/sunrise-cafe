@@ -10,6 +10,10 @@ import Button from '../atoms/Button';
 import Link from '../atoms/Link';
 import DescriptionProduct from '../atoms/DescriptionProduct';
 import DescriptionPrice from '../atoms/DescriptionPrice';
+import CardInfo from '../atoms/CardInfo'
+import OrderTotal from '../atoms/OrderTotal'
+import TextInfo from '../atoms/TextInfo';
+import PriceInfo from '../atoms/PrinceInfo';
 
 const Wrapper = styled.section`
   padding: 4em;
@@ -27,6 +31,11 @@ const Tipography = () => {
       <Link>Links/Notas</Link>
       <DescriptionProduct>Descripción</DescriptionProduct>
       <DescriptionPrice>Precio Descripción $110</DescriptionPrice>
+      <CardInfo>
+         <TextInfo>Recaudado</TextInfo>
+         <PriceInfo>$2800</PriceInfo>
+      </CardInfo>
+      <OrderTotal>Total $500</OrderTotal>
     </Wrapper>
   );
 };

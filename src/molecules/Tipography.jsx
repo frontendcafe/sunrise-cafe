@@ -37,7 +37,7 @@ const Tipography = () => {
         <PriceInfo>$2800</PriceInfo>
       </CardInfo>
       <OrderTotal>Total $500</OrderTotal>
-      <DisplayNumberCart value="0045" />
+      <DisplayNumberCart value="045" />
     </Wrapper>
   );
 };

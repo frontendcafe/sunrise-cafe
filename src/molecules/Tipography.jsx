@@ -22,6 +22,7 @@ import InputCurrency from '../atoms/InputCurrency';
 import InputCreditCardNumber from '../atoms/InputCreditCardNumber';
 import InputCreditCardExpiry from '../atoms/InputCreditCardExpiry';
 import InputCreditCardVerificationValue from '../atoms/InputCreditCardVerificationValue';
+import DisplayNumberCart from '../atoms/DisplayNumberCart';
 
 const Wrapper = styled.section`
   padding: 4em;
@@ -51,7 +52,9 @@ const Tipography = () => {
         <PriceInfo>$2800</PriceInfo>
       </CardInfo>
       <OrderTotal>Total $500</OrderTotal>
-      {/* Inputs */}
+      <DisplayNumberCart value="045" />
+
+    {/* Inputs */}
       <InputField>
         <Label>Cantidad</Label>
         <InputNumber decimals={0} name="quantity" setValue={setQuantity} value={quantity} />

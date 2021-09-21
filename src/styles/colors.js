@@ -16,4 +16,6 @@ export default {
   dark: wordsColor.negro,
   accent: wordsColor.azul,
   accent_brown: wordsColor.marron,
+  blue: wordsColor.azul,
+  gray: wordsColor.gris,
 };

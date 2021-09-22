@@ -23,7 +23,7 @@ import InputCreditCardNumber from '../atoms/InputCreditCardNumber';
 import InputCreditCardExpiry from '../atoms/InputCreditCardExpiry';
 import InputCreditCardVerificationValue from '../atoms/InputCreditCardVerificationValue';
 import DisplayNumberCart from '../atoms/DisplayNumberCart';
-import { InputCheckBox } from '../atoms/InputCheckBox';
+import InputRadio from '../atoms/InputRadio';
 
 const Wrapper = styled.section`
   padding: 4em;
@@ -54,7 +54,7 @@ const Tipography = () => {
       </CardInfo>
       <OrderTotal>Total $500</OrderTotal>
       <DisplayNumberCart value="045" />
-      <InputCheckBox />
+      <InputRadio value="Chico" />
 
       {/* Inputs */}
       <InputField>

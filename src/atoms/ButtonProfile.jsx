@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+
 import github from '../image/github.svg';
 import linkedin from '../image/linkedin.svg';
 
 const Button = styled.button`
-  background: no-repeat url(${props => props.linkType? github : linkedin});
-  border:none;
+  background: no-repeat url(${(props) => (props.linkType ? github : linkedin)});
+  border: none;
 `;
 
 const Anchor = styled.a`
@@ -13,22 +14,21 @@ const Anchor = styled.a`
   width: 2.4rem;
   height: 2.4rem;
   margin: 0.5rem;
-  &:hover{
-  cursor: pointer;
-}  
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const ButtonProfile = ({profileUrl, socialMedia}) => {
-    return ( 
-        (socialMedia==='github')?
-        <Button linkType>
-          <Anchor href={profileUrl} target="_blank" rel="noopener noreferrer"></Anchor>
-        </Button> 
-        :
-        <Button >
-          <Anchor href={profileUrl} target="_blank" rel="noopener noreferrer"></Anchor>
-        </Button>
-     );
-}
- 
+  return socialMedia === 'github' ? (
+    <Button linkType>
+      <Anchor href={profileUrl} rel="noopener noreferrer" target="_blank" />
+    </Button>
+  ) : (
+    <Button>
+      <Anchor href={profileUrl} rel="noopener noreferrer" target="_blank" />
+    </Button>
+  );
+};
+
 export default ButtonProfile;

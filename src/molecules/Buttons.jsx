@@ -1,82 +1,44 @@
 import React from 'react';
-import { Fragment } from "react";
-import ButtonProfile from "../atoms/ButtonProfile";
-import ButtonPrimary from "../atoms/Button-primary";
+import {Fragment} from 'react';
+
+import ButtonProfile from '../atoms/ButtonProfile';
+import ButtonPrimary from '../atoms/Button-primary';
 import ButtonSecondary from '../atoms/Button-secondary';
 import ButtonSize from '../atoms/Button-size';
 import ButtonAddToOrder from '../atoms/Button-addToOrder';
 import ButtonArrowBack from '../atoms/Button-back';
 import ButtonCancel from '../atoms/Button-cancel';
-import ButtonIcon from '../atoms/Button-icon';
+import ButtonHome from '../atoms/Button-home';
+import ButtonBread from '../atoms/Button-bread';
+import ButtonCake from '../atoms/Button-cake';
+import ButtonDrink from '../atoms/Button-drink';
+import ButtonIcecream from '../atoms/Button-icecream';
+import ButtonMerch from '../atoms/Button-merch';
 
 const Buttons = () => {
-    return (
-       <Fragment>
-           <ButtonProfile
-              socialMedia={'github'} 
-              profileUrl={"https://github.com/rhonaldm"}
-           />
-           <ButtonProfile
-              socialMedia={'linkedin'} 
-              profileUrl={"https://www.linkedin.com/in/rhonald-maradey-24590640/"}
-           />
-           <ButtonPrimary
-               text={'Boton'}
-               disable={false}
-           />
-           <ButtonSecondary
-               text={'Boton'}
-               disable={false}
-           />
-           <ButtonSize
-               text={'Ordenar'}
-               size={'xl'}
-               color={'primary'}
-           />
-           <ButtonSize
-               text={'Ventas'}
-               size={'xl'}
-               color={'accent'}
-           />
-           <ButtonSize
-               text={'CheckOut'}
-               size={'l'}
-               color={'primary'}
-               active={true}
-           />
-           <ButtonAddToOrder
-               price={'$55'} 
-           />
-           <ButtonArrowBack
-               price={'$55'} 
-           />
-           <ButtonCancel/>
-           <ButtonIcon
-                iconType={'home'}
-                active={true}
-           />
-           <ButtonIcon
-                iconType={'drink'}
-                active={true}
-           />
-           <ButtonIcon
-                iconType={'bread'}
-                active={true}
-           />
-           <ButtonIcon
-                iconType={'cake'}
-                active={true}
-           />
-           <ButtonIcon
-                iconType={'icecream'}
-                active={true}
-           />
-           <ButtonIcon
-                iconType={'merch'}
-                active={true}
-           />
-       </Fragment>
-      );
-}
- 
+  return (
+    <Fragment>
+      <ButtonProfile profileUrl={'https://github.com/rhonaldm'} socialMedia={'github'} />
+      <ButtonProfile
+        profileUrl={'https://www.linkedin.com/in/rhonald-maradey-24590640/'}
+        socialMedia={'linkedin'}
+      />
+      <ButtonPrimary disable={false} text={'Boton'} />
+      <ButtonSecondary disable={false} text={'Boton'} />
+      <ButtonSize color={'primary'} size={'xl'} text={'Ordenar'} />
+      <ButtonSize color={'accent'} size={'xl'} text={'Ventas'} />
+      <ButtonSize active={true} color={'primary'} size={'l'} text={'CheckOut'} />
+      <ButtonAddToOrder price={'$55'} />
+      <ButtonArrowBack price={'$55'} />
+      <ButtonCancel />
+      <ButtonHome active={true} />
+      <ButtonBread active={true} />
+      <ButtonCake active={true} />
+      <ButtonDrink active={true} />
+      <ButtonIcecream active={true} />
+      <ButtonMerch active={true} />
+    </Fragment>
+  );
+};
+
 export default Buttons;

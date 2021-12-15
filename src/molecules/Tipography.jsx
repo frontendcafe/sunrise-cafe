@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 import colors from '../styles/colors';
@@ -54,7 +54,7 @@ const Tipography = () => {
       <OrderTotal>Total $500</OrderTotal>
       <DisplayNumberCart value="045" />
 
-    {/* Inputs */}
+      {/* Inputs */}
       <InputField>
         <Label>Cantidad</Label>
         <InputNumber decimals={0} name="quantity" setValue={setQuantity} value={quantity} />

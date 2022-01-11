@@ -16,13 +16,13 @@ const RadioInput = styled.input`
 
 const RadioSpan = styled.div`
   cursor: pointer;
-  border: 1.5px solid #5e3e00;
+  border: 2px solid #5e3e00;
   border-radius: 50%;
   height: 3rem;
   width: 2.8rem;
   position: absolute;
-  left: 0;
-  top: -0.4rem;
+  left: -3.5rem;
+  top: -0.85rem;
 
   /* padding-left: 4.5rem; */
 
@@ -32,7 +32,8 @@ const RadioSpan = styled.div`
   }
 
   ${RadioContainer}:hover & {
-    border: double #5e3e00;
+    border: double #5e555a;
+    background: #f0eecd;
   }
 
   ${RadioInput}:checked + &::after {

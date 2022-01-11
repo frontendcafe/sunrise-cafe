@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from '@emotion/styled';
 
 import colors from '../styles/colors';
@@ -54,6 +54,7 @@ const Tipography = () => {
       </CardInfo>
       <OrderTotal>Total $500</OrderTotal>
       <DisplayNumberCart value="045" />
+      <InputRadio value="Chico" />
       <InputRadio value="Chico" />
 
       {/* Inputs */}

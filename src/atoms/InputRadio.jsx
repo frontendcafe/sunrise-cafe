@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const RadioContainer = styled.div`
+const RadioContainer = styled.label`
   position: relative;
   display: inline-block;
   margin: 1.1rem 3rem;

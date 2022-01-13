@@ -23,6 +23,7 @@ import InputCreditCardNumber from '../atoms/InputCreditCardNumber';
 import InputCreditCardExpiry from '../atoms/InputCreditCardExpiry';
 import InputCreditCardVerificationValue from '../atoms/InputCreditCardVerificationValue';
 import DisplayNumberCart from '../atoms/DisplayNumberCart';
+import InputRadio from '../atoms/InputRadio';
 
 const Wrapper = styled.section`
   padding: 4em;
@@ -53,8 +54,10 @@ const Tipography = () => {
       </CardInfo>
       <OrderTotal>Total $500</OrderTotal>
       <DisplayNumberCart value="045" />
+      <InputRadio value="Chico" />
+      <InputRadio value="Chico" />
 
-    {/* Inputs */}
+      {/* Inputs */}
       <InputField>
         <Label>Cantidad</Label>
         <InputNumber decimals={0} name="quantity" setValue={setQuantity} value={quantity} />

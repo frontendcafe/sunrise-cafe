@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import H1 from '../atoms/H1';
-import IconCoffee from '../IconCoffee.svg';
+import IconCoffee from '../image/IconCoffee.svg';
 
 const Logo = styled.div`
   display: flex;

@@ -38,9 +38,9 @@ const RadioSpan = styled.div`
 
   ${RadioInput}:checked + &::after {
     border-radius: 1em;
-    background-color: #263238;
-    width: 0.5em;
-    height: 0.5em;
+    background-color: #5e3e00;
+    width: 1.2em;
+    height: 1.2em;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

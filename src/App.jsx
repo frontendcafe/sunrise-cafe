@@ -10,6 +10,7 @@ import {Counter} from './molecules/Counter';
 
 function App() {
   const [count, setCount] = useState(1);
+  const [count2, setCount2] = useState(1);
 
   const onDeleteCounter = () => {
     console.log('Delete counter');
@@ -25,7 +26,8 @@ function App() {
       <div className="App">
         <Header />
         <SearchBar onClick={onClickSearch} />
-        <Counter count={count} setCount={setCount} onDelete={onDeleteCounter} />
+        <Counter filled count={count} setCount={setCount} onDelete={onDeleteCounter} />
+        <Counter count={count2} setCount={setCount2} onDelete={onDeleteCounter} />
         <Tipography />
         <Buttons />
         <AppRouter />

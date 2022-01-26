@@ -8,6 +8,7 @@ const Price = styled.p`
   line-height: 1.8rem;
   letter-spacing: 0px;
   color: ${colors.primary};
+  margin: 0;
 `;
 
 export default Price;

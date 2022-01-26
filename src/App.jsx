@@ -7,6 +7,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import {Header} from './molecules/Header';
 import {SearchBar} from './molecules/SearchBar';
 import {Counter} from './molecules/Counter';
+import {CommandButtons} from './molecules/CommandButtons';
 
 function App() {
   const [count, setCount] = useState(1);
@@ -30,6 +31,7 @@ function App() {
         <Counter count={count2} setCount={setCount2} onDelete={onDeleteCounter} />
         <Tipography />
         <Buttons />
+        <CommandButtons />
         <AppRouter />
       </div>
     </>

@@ -10,7 +10,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: 120px;
+  width: 85px;
+  height: 2.4rem;
   color: ${colors.accent};
 `;
 
@@ -19,17 +20,17 @@ const Button = styled.div`
   place-items: center;
   background-color: ${({filled}) => (filled ? colors.primary : colors.light)};
   color: ${({filled}) => (filled ? colors.light : colors.primary)};
-  padding: 1rem;
-  font-size: 17px;
+  padding: 0.5rem;
+  font-size: 13px;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid ${({filled}) => (filled ? colors.light : colors.primary)};
-  width: 4rem;
-  height: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
 `;
 
 const Trash = styled.img`
-  height: 3.5rem;
+  height: 1.75rem;
   cursor: pointer;
 `;
 

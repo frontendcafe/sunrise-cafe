@@ -6,18 +6,15 @@ import AppRouter from './routers/AppRouter';
 import GlobalStyle from './styles/GlobalStyle';
 import {Header} from './molecules/Header';
 import {SearchBar} from './molecules/SearchBar';
-import {Counter} from './molecules/Counter';
+import {OrdenItem} from './molecules/OrdenItem';
 
 function App() {
-  const [count, setCount] = useState(1);
-  const [count2, setCount2] = useState(1);
-
-  const onDeleteCounter = () => {
-    console.log('Delete counter');
-  };
-
   const onClickSearch = (searchText) => {
     console.log(searchText);
+  };
+
+  const handleDeleteItem = () => {
+    console.log('Delete item');
   };
 
   return (
@@ -26,8 +23,13 @@ function App() {
       <div className="App">
         <Header />
         <SearchBar onClick={onClickSearch} />
-        <Counter filled count={count} setCount={setCount} onDelete={onDeleteCounter} />
-        <Counter count={count2} setCount={setCount2} onDelete={onDeleteCounter} />
+        <OrdenItem
+          handleDelete={handleDeleteItem}
+          nota="NOTA: SIN AZÚCAR"
+          price="$10.00"
+          subtitle="LECHE DE COCO"
+          title="Café Mocka"
+        />
         <Tipography />
         <Buttons />
         <AppRouter />

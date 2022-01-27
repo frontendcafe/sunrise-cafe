@@ -7,6 +7,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import {Header} from './molecules/Header';
 import {SearchBar} from './molecules/SearchBar';
 import {OrdenItem} from './molecules/OrdenItem';
+import {CommandButtons} from './molecules/CommandButtons';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -32,6 +33,7 @@ function App() {
         />
         <Tipography />
         <Buttons />
+        <CommandButtons />
         <AppRouter />
       </div>
     </>

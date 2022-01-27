@@ -8,6 +8,7 @@ const H3 = styled.h3`
   line-height: 1.8rem;
   letter-spacing: 0px;
   color: ${colors.dark};
+  margin: 0;
 `;
 
 export default H3;

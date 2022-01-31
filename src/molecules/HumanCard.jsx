@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import IconGitHub from '../image/IconGitHub.svg';
 import IconLinkedIn from '../image/IconLinkedIn.svg';
 import colors from '../styles/colors';
+import ButtonProfile from '../atoms/ButtonProfile';
 
 const Container = styled.div`
   display: flex;
@@ -24,7 +25,6 @@ const Image = styled.img`
 
 const SocialNetworks = styled.div`
   display: flex;
-  gap: 0.5rem;
 `;
 
 const Name = styled.span`
@@ -71,8 +71,8 @@ export const HumanCard = ({photo, name, rol, gitHubAddress, linkedInAddress}) =>
       <Name>{name} </Name>
       <Rol>{rol}</Rol>
       <SocialNetworks>
-        <GitHub onClick={() => window.open(gitHubAddress, '_blank')} />
-        <LinkedIn onClick={() => window.open(linkedInAddress, '_blank')} />
+        <ButtonProfile profileUrl={gitHubAddress} socialMedia={'github'} />
+        <ButtonProfile profileUrl={linkedInAddress} socialMedia={'linkedin'} />
       </SocialNetworks>
     </Container>
   );

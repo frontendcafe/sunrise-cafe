@@ -13,7 +13,6 @@ const Anchor = styled.a`
   display: block;
   width: 2.4rem;
   height: 2.4rem;
-  margin: 0.5rem;
   &:hover {
     cursor: pointer;
   }

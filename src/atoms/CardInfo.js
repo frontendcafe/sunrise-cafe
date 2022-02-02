@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import colors from '../styles/colors';
 
 const CardInfo = styled.button`
@@ -10,6 +11,5 @@ const CardInfo = styled.button`
   line-height: 1rem;
   width: 16rem;
 `;
-
 
 export default CardInfo;

@@ -8,6 +8,7 @@ import {Header} from './molecules/Header';
 import {SearchBar} from './molecules/SearchBar';
 import {OrdenItem} from './molecules/OrdenItem';
 import {CommandButtons} from './molecules/CommandButtons';
+import {CashPayment} from './molecules/CashPayment';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -34,6 +35,7 @@ function App() {
         <Tipography />
         <Buttons />
         <CommandButtons />
+        <CashPayment />
         <AppRouter />
       </div>
     </>

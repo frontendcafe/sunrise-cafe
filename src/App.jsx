@@ -9,6 +9,7 @@ import {Header} from './molecules/Header';
 import {SearchBar} from './molecules/SearchBar';
 import {OrdenItem} from './molecules/OrdenItem';
 import {CommandButtons} from './molecules/CommandButtons';
+import {CashPayment} from './molecules/CashPayment';
 import {HumanCard} from './molecules/HumanCard';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Tipography />
         <Buttons />
         <CommandButtons />
+        <CashPayment />
         <AppRouter />
       </div>
     </>

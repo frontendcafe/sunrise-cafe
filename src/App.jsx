@@ -12,6 +12,7 @@ import {CommandButtons} from './molecules/CommandButtons';
 import {CashPayment} from './molecules/CashPayment';
 import {HumanCard} from './molecules/HumanCard';
 import {CardPayment} from './molecules/CardPayment';
+import {TotalSalesDay} from './molecules/TotalSalesDay';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -22,12 +23,16 @@ function App() {
     console.log('Delete item');
   };
 
+  const [orders] = useState({name: 'Órdenes', cant: 45});
+  const [raised] = useState({name: 'Recaudado', cant: '$2800'});
+  const [products] = useState({name: 'Productos', cant: 57});
+
   return (
     <>
       <GlobalStyle />
       <div className="App">
         <Header />
-
+        <TotalSalesDay orders={orders} products={products} raised={raised} />
         <CardPayment />
         <SearchBar onClick={onClickSearch} />
         <OrdenItem

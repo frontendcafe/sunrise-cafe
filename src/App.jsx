@@ -11,6 +11,7 @@ import {OrdenItem} from './molecules/OrdenItem';
 import {CommandButtons} from './molecules/CommandButtons';
 import {CashPayment} from './molecules/CashPayment';
 import {HumanCard} from './molecules/HumanCard';
+import VercelInfo from './atoms/VercelInfo';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -46,6 +47,7 @@ function App() {
         <CommandButtons />
         <CashPayment />
         <AppRouter />
+        <VercelInfo />
       </div>
     </>
   );

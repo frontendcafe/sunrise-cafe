@@ -9,7 +9,9 @@ const CardInfo = styled.button`
   font-weight: 600;
   height: 8rem;
   line-height: 1rem;
-  width: 16rem;
+  width: 20rem;
+  box-shadow: 1px 2px 2px ${colors.gray};
+  /* border: 1px solid ${colors.gray}; */
 `;
 
 export default CardInfo;

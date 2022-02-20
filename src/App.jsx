@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import LupisImage from './image/Lupis.png';
 import Tipography from './molecules/Tipography';
@@ -11,6 +11,7 @@ import {OrdenItem} from './molecules/OrdenItem';
 import {CommandButtons} from './molecules/CommandButtons';
 import {CashPayment} from './molecules/CashPayment';
 import {HumanCard} from './molecules/HumanCard';
+import {CardPayment} from './molecules/CardPayment';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -26,6 +27,8 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <Header />
+
+        <CardPayment />
         <SearchBar onClick={onClickSearch} />
         <OrdenItem
           handleDelete={handleDeleteItem}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import LupisImage from './image/Lupis.png';
 import Tipography from './molecules/Tipography';
@@ -12,6 +12,8 @@ import {CommandButtons} from './molecules/CommandButtons';
 import {CashPayment} from './molecules/CashPayment';
 import {HumanCard} from './molecules/HumanCard';
 import VercelInfo from './atoms/VercelInfo';
+import {CardPayment} from './molecules/CardPayment';
+import {TotalSalesDay} from './molecules/TotalSalesDay';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -22,11 +24,17 @@ function App() {
     console.log('Delete item');
   };
 
+  const [orders] = useState({name: 'Órdenes', cant: 45});
+  const [raised] = useState({name: 'Recaudado', cant: '$2800'});
+  const [products] = useState({name: 'Productos', cant: 57});
+
   return (
     <>
       <GlobalStyle />
       <div className="App">
         <Header />
+        <TotalSalesDay orders={orders} products={products} raised={raised} />
+        <CardPayment />
         <SearchBar onClick={onClickSearch} />
         <OrdenItem
           handleDelete={handleDeleteItem}

@@ -5,7 +5,7 @@ import fonts from '../styles/fonts';
 
 const TextInfo = styled.p`
   color: ${colors.blue};
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: ${fonts.primary};
 `;
 

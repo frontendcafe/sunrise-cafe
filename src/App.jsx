@@ -11,6 +11,7 @@ import {OrdenItem} from './molecules/OrdenItem';
 import {CommandButtons} from './molecules/CommandButtons';
 import {CashPayment} from './molecules/CashPayment';
 import {HumanCard} from './molecules/HumanCard';
+import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
 
@@ -54,6 +55,7 @@ function App() {
         <CommandButtons />
         <CashPayment />
         <AppRouter />
+        <VercelInfo />
       </div>
     </>
   );

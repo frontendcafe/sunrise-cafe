@@ -33,6 +33,7 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <Header />
+	<TextAboutUs />
         <TotalSalesDay orders={orders} products={products} raised={raised} />
         <CardPayment />
         <SearchBar onClick={onClickSearch} />

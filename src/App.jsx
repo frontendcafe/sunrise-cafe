@@ -12,6 +12,7 @@ import {OrdenItem} from './molecules/OrdenItem';
 import {CommandButtons} from './molecules/CommandButtons';
 import {CashPayment} from './molecules/CashPayment';
 import {HumanCard} from './molecules/HumanCard';
+import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
 import HomeImage from './image/homeImage.svg';
@@ -34,7 +35,7 @@ function App() {
     width: 50rem;
   `;
 
-  const itemPurchase = {
+ const itemPurchase = {
     category: 'Bebidas',
     products: [
       {id: 1, name: 'Café Mocka', cant: 2, total: 110},
@@ -74,6 +75,7 @@ function App() {
         <CommandButtons />
         <CashPayment />
         <AppRouter />
+        <VercelInfo />
       </div>
     </>
   );

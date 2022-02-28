@@ -15,7 +15,7 @@ import {HumanCard} from './molecules/HumanCard';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
 import HomeImage from './image/homeImage.svg';
-import {ItemPurchaseReceipt} from './molecules/ItemPurchaseReceipt';
+import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -47,7 +47,10 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <Header />
-        <ItemPurchaseReceipt category={itemPurchase.category} products={itemPurchase.products} />
+        <ItemsCategoryPurchaseReceipt
+          category={itemPurchase.category}
+          products={itemPurchase.products}
+        />
         <Image src={HomeImage} />
         <TotalSalesDay orders={orders} products={products} raised={raised} />
         <CardPayment />

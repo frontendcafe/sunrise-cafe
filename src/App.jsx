@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styled from '@emotion/styled';
 
 import LupisImage from './image/Lupis.png';
 import Tipography from './molecules/Tipography';
@@ -15,6 +16,7 @@ import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
 import {Itempurchasereceipt} from './molecules/ItemPurchaseReceipt';
+import HomeImage from './image/homeImage.svg';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -29,11 +31,16 @@ function App() {
   const [raised] = useState({name: 'Recaudado', cant: '$2800'});
   const [products] = useState({name: 'Productos', cant: 57});
 
+  const Image = styled.img`
+    width: 50rem;
+  `;
+
   return (
     <>
       <GlobalStyle />
       <div className="App">
         <Header />
+        <Image src={HomeImage} />
         <TotalSalesDay orders={orders} products={products} raised={raised} />
         <CardPayment />
         <SearchBar onClick={onClickSearch} />

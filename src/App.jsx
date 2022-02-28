@@ -14,6 +14,7 @@ import {HumanCard} from './molecules/HumanCard';
 import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
+import {Itempurchasereceipt} from './molecules/ItemPurchaseReceipt';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -55,6 +56,7 @@ function App() {
         <CommandButtons />
         <CashPayment />
         <AppRouter />
+        <Itempurchasereceipt />
         <VercelInfo />
       </div>
     </>

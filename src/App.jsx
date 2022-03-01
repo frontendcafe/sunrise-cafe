@@ -16,6 +16,7 @@ import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
 import HomeImage from './image/homeImage.svg';
+import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -34,11 +35,23 @@ function App() {
     width: 50rem;
   `;
 
+ const itemPurchase = {
+    category: 'Bebidas',
+    products: [
+      {id: 1, name: 'Café Mocka', cant: 2, total: 110},
+      {id: 2, name: 'Café ', cant: 4, total: 220},
+    ],
+  };
+
   return (
     <>
       <GlobalStyle />
       <div className="App">
         <Header />
+        <ItemsCategoryPurchaseReceipt
+          category={itemPurchase.category}
+          products={itemPurchase.products}
+        />
         <Image src={HomeImage} />
         <TotalSalesDay orders={orders} products={products} raised={raised} />
         <CardPayment />

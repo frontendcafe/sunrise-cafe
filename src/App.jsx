@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styled from '@emotion/styled';
 
 import LupisImage from './image/Lupis.png';
 import Tipography from './molecules/Tipography';
@@ -15,6 +16,8 @@ import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
 import TextAboutUs from './molecules/TextAboutUs';
+import HomeImage from './image/homeImage.svg';
+import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -29,12 +32,29 @@ function App() {
   const [raised] = useState({name: 'Recaudado', cant: '$2800'});
   const [products] = useState({name: 'Productos', cant: 57});
 
+  const Image = styled.img`
+    width: 50rem;
+  `;
+
+  const itemPurchase = {
+    category: 'Bebidas',
+    products: [
+      {id: 1, name: 'Café Mocka', cant: 2, total: 110},
+      {id: 2, name: 'Café ', cant: 4, total: 220},
+    ],
+  };
+
   return (
     <>
       <GlobalStyle />
       <div className="App">
         <Header />
         <TextAboutUs />
+        <ItemsCategoryPurchaseReceipt
+          category={itemPurchase.category}
+          products={itemPurchase.products}
+        />
+        <Image src={HomeImage} />
         <TotalSalesDay orders={orders} products={products} raised={raised} />
         <CardPayment />
         <SearchBar onClick={onClickSearch} />

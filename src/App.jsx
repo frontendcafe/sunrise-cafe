@@ -15,6 +15,7 @@ import {HumanCard} from './molecules/HumanCard';
 import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
+import TextAboutUs from './molecules/TextAboutUs';
 import HomeImage from './image/homeImage.svg';
 import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
 
@@ -35,7 +36,7 @@ function App() {
     width: 50rem;
   `;
 
- const itemPurchase = {
+  const itemPurchase = {
     category: 'Bebidas',
     products: [
       {id: 1, name: 'Café Mocka', cant: 2, total: 110},
@@ -48,6 +49,7 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <Header />
+        <TextAboutUs />
         <ItemsCategoryPurchaseReceipt
           category={itemPurchase.category}
           products={itemPurchase.products}

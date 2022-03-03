@@ -18,6 +18,7 @@ import {TotalSalesDay} from './molecules/TotalSalesDay';
 import TextAboutUs from './molecules/TextAboutUs';
 import HomeImage from './image/homeImage.svg';
 import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
+import {TotalPurchaseReceipt} from './molecules/TotalPurchaseReceipt';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -35,6 +36,11 @@ function App() {
   const Image = styled.img`
     width: 50rem;
   `;
+
+  const purchase = {
+    paymentMethod: 'Tarjeta Terminada ***5678',
+    total: 225.0,
+  };
 
   const itemPurchase = {
     category: 'Bebidas',
@@ -54,6 +60,7 @@ function App() {
           category={itemPurchase.category}
           products={itemPurchase.products}
         />
+        <TotalPurchaseReceipt paymentMethod={purchase.paymentMethod} total={purchase.total} />
         <Image src={HomeImage} />
         <TotalSalesDay orders={orders} products={products} raised={raised} />
         <CardPayment />

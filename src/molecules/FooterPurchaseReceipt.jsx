@@ -8,6 +8,7 @@ export const FooterPurchaseReceipt = () => {
   const Container = styled.div`
     margin: 2rem 0;
     display: flex;
+    align-items: center;
   `;
 
   const Circle = styled.div`
@@ -21,7 +22,7 @@ export const FooterPurchaseReceipt = () => {
   return (
     <Container>
       <Circle />
-      <Link>Gracias Por Su Compra En FrontEnd Sunrise Café</Link>
+      <Link>Gracias Por Su Compra En FrontEnd Sunrise Café.</Link>
     </Container>
   );
 };

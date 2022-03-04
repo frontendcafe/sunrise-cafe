@@ -18,6 +18,7 @@ import {TotalSalesDay} from './molecules/TotalSalesDay';
 import TextAboutUs from './molecules/TextAboutUs';
 import HomeImage from './image/homeImage.svg';
 import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
+import HeadearPurchaseReceipt from './molecules/HeadearPurchaseReceipt';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -48,6 +49,7 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
+        <HeadearPurchaseReceipt />
         <Header />
         <TextAboutUs />
         <ItemsCategoryPurchaseReceipt

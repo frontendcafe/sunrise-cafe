@@ -32,6 +32,11 @@ function App() {
   const [orders] = useState({name: 'Órdenes', cant: 45});
   const [raised] = useState({name: 'Recaudado', cant: '$2800'});
   const [products] = useState({name: 'Productos', cant: 57});
+  const headerPurchase = {
+    date: '01/01/2020',
+    hour: '10:19 P.M.',
+    order: 0,
+  };
 
   const Image = styled.img`
     width: 50rem;
@@ -49,7 +54,11 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
-        <HeadearPurchaseReceipt />
+        <HeadearPurchaseReceipt
+          paymentDate={headerPurchase.date}
+          paymentHour={headerPurchase.hour}
+          paymentNumber={headerPurchase.order}
+        />
         <Header />
         <TextAboutUs />
         <ItemsCategoryPurchaseReceipt

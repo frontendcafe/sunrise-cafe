@@ -9,7 +9,7 @@ const HeaderOneDouble = styled.h1`
 const BlockLeft = styled.p`
   font-size: 2rem;
   > p {
-    margin: 1rem;
+    margin: 1rem 0;
   }
 `;
 
@@ -23,16 +23,16 @@ const FlexContainer = styled.div`
   justify-content: space-between;
 `;
 
-function HeadearPurchaseReceipt() {
+function HeadearPurchaseReceipt({paymentDate, paymentHour, paymentNumber}) {
   return (
     <>
       <HeaderOneDouble>Recibo</HeaderOneDouble>
       <FlexContainer>
         <BlockLeft>
-          <p>01/01/2020</p>
-          <p>10:19 P.M.</p>
+          <p>{paymentDate}</p>
+          <p>{paymentHour}</p>
         </BlockLeft>
-        <BlockRight>Orden No. 0</BlockRight>
+        <BlockRight>Orden No. {paymentNumber}</BlockRight>
       </FlexContainer>
     </>
   );

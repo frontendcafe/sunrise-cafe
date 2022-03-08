@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import styled from '@emotion/styled';
 
+import 'animate.css';
 import IconCheck from '../image/IconCheck.svg';
 
 const Container = styled.div`
@@ -24,8 +25,8 @@ const ModalMain = styled.div`
   align-items: center;
   text-align: center;
   padding: 2rem 2rem 5rem 2rem;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 42%;
   transform: translate(-50%, -50%);
   border-radius: 1rem;
 `;
@@ -48,7 +49,7 @@ export const NotificationModal = ({handleClose, show, children}) => {
 
   return (
     <Container show={show}>
-      <ModalMain>
+      <ModalMain className="animate__animated animate__bounceInRight">
         {children}
 
         <Icon />

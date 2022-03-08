@@ -20,6 +20,7 @@ import HomeImage from './image/homeImage.svg';
 import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
 import {TotalPurchaseReceipt} from './molecules/TotalPurchaseReceipt';
 import { FooterPurchaseReceipt } from './molecules/FooterPurchaseReceipt';
+import { Itemspurchasereceipt } from './molecules/ItemsPurchaseReceipt';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -57,6 +58,7 @@ function App() {
       <div className="App">
         <Header />
         <TextAboutUs />
+        <Itemspurchasereceipt />
         <ItemsCategoryPurchaseReceipt
           category={itemPurchase.category}
           products={itemPurchase.products}

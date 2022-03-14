@@ -18,6 +18,7 @@ import {TotalSalesDay} from './molecules/TotalSalesDay';
 import TextAboutUs from './molecules/TextAboutUs';
 import HomeImage from './image/homeImage.svg';
 import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
+import HeadearPurchaseReceipt from './molecules/HeadearPurchaseReceipt';
 import {TotalPurchaseReceipt} from './molecules/TotalPurchaseReceipt';
 import { FooterPurchaseReceipt } from './molecules/FooterPurchaseReceipt';
 
@@ -33,6 +34,11 @@ function App() {
   const [orders] = useState({name: 'Órdenes', cant: 45});
   const [raised] = useState({name: 'Recaudado', cant: '$2800'});
   const [products] = useState({name: 'Productos', cant: 57});
+  const headerPurchase = {
+    date: '01/01/2020',
+    hour: '10:19 P.M.',
+    order: 0,
+  };
 
   const Image = styled.img`
     width: 50rem;
@@ -55,6 +61,11 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
+        <HeadearPurchaseReceipt
+          paymentDate={headerPurchase.date}
+          paymentHour={headerPurchase.hour}
+          paymentNumber={headerPurchase.order}
+        />
         <Header />
         <TextAboutUs />
         <ItemsCategoryPurchaseReceipt

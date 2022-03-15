@@ -44,7 +44,7 @@ export const NotificationModal = ({handleClose, show, children}) => {
   useEffect(() => {
     let timer = setTimeout(() => {
       handleClose();
-    }, 6000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);

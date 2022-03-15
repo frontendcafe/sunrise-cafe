@@ -42,9 +42,13 @@ Icon.defaultProps = {
 
 export const NotificationModal = ({handleClose, show, children}) => {
   useEffect(() => {
-    setTimeout(() => {
+    let timer = setTimeout(() => {
       handleClose();
-    }, 3000);
+    }, 6000);
+
+    return () => {
+      clearTimeout(timer);
+    };
   });
 
   return (

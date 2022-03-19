@@ -20,7 +20,10 @@ import HomeImage from './image/homeImage.svg';
 import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
 import HeadearPurchaseReceipt from './molecules/HeadearPurchaseReceipt';
 import {TotalPurchaseReceipt} from './molecules/TotalPurchaseReceipt';
-import { FooterPurchaseReceipt } from './molecules/FooterPurchaseReceipt';
+import {FooterPurchaseReceipt} from './molecules/FooterPurchaseReceipt';
+import {NotificationModal} from './molecules/NotificationModal';
+import DescriptionPrice from './atoms/DescriptionPrice';
+import IconCheck from './image/IconCheck.svg';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -57,6 +60,12 @@ function App() {
     ],
   };
 
+  const [showModal, setShowModal] = useState(false);
+
+  const hideModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <GlobalStyle />
@@ -67,6 +76,16 @@ function App() {
           paymentNumber={headerPurchase.order}
         />
         <Header />
+
+        <section>
+          <NotificationModal handleClose={() => hideModal()} show={showModal}>
+            <DescriptionPrice>TARJETA APROBADA</DescriptionPrice>
+          </NotificationModal>
+          <button type="button" onClick={() => setShowModal(true)}>
+            Ver modal
+          </button>
+        </section>
+
         <TextAboutUs />
         <ItemsCategoryPurchaseReceipt
           category={itemPurchase.category}

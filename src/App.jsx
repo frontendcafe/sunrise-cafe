@@ -19,9 +19,12 @@ import TextAboutUs from './molecules/TextAboutUs';
 import HomeImage from './image/homeImage.svg';
 import { ItemsCategoryPurchaseReceipt } from './molecules/ItemsCategoryPurchaseReceipt';
 import HeadearPurchaseReceipt from './molecules/HeadearPurchaseReceipt';
-import { TotalPurchaseReceipt } from './molecules/TotalPurchaseReceipt';
-import { FooterPurchaseReceipt } from './molecules/FooterPurchaseReceipt';
 import { ProductCard } from './molecules/ProductCard';
+import {TotalPurchaseReceipt} from './molecules/TotalPurchaseReceipt';
+import {FooterPurchaseReceipt} from './molecules/FooterPurchaseReceipt';
+import {NotificationModal} from './molecules/NotificationModal';
+import DescriptionPrice from './atoms/DescriptionPrice';
+import IconCheck from './image/IconCheck.svg';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -58,11 +61,17 @@ function App() {
     ],
   };
 
+
   const productData = {
     image:
       'https://firebasestorage.googleapis.com/v0/b/cmyksunrise.appspot.com/o/cup-of-coffee-1504205_640.webp?alt=media&token=f09dfdea-db81-4e8d-b805-f6a869d5bd96',
     price: '55.00',
     title: 'Café Mocka',
+};
+  const [showModal, setShowModal] = useState(false);
+
+  const hideModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -81,6 +90,16 @@ function App() {
           paymentNumber={headerPurchase.order}
         />
         <Header />
+
+        <section>
+          <NotificationModal handleClose={() => hideModal()} show={showModal}>
+            <DescriptionPrice>TARJETA APROBADA</DescriptionPrice>
+          </NotificationModal>
+          <button type="button" onClick={() => setShowModal(true)}>
+            Ver modal
+          </button>
+        </section>
+
         <TextAboutUs />
         <ItemsCategoryPurchaseReceipt
           category={itemPurchase.category}

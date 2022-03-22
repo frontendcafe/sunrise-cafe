@@ -18,9 +18,13 @@ import {TotalSalesDay} from './molecules/TotalSalesDay';
 import TextAboutUs from './molecules/TextAboutUs';
 import HomeImage from './image/homeImage.svg';
 import {ItemsCategoryPurchaseReceipt} from './molecules/ItemsCategoryPurchaseReceipt';
+import HeadearPurchaseReceipt from './molecules/HeadearPurchaseReceipt';
 import {TotalPurchaseReceipt} from './molecules/TotalPurchaseReceipt';
-import { FooterPurchaseReceipt } from './molecules/FooterPurchaseReceipt';
-import { Itemspurchasereceipt } from './molecules/ItemsPurchaseReceipt';
+import {FooterPurchaseReceipt} from './molecules/FooterPurchaseReceipt';
+import {Itemspurchasereceipt} from './molecules/ItemsPurchaseReceipt';
+import {NotificationModal} from './molecules/NotificationModal';
+import DescriptionPrice from './atoms/DescriptionPrice';
+import IconCheck from './image/IconCheck.svg';
 
 function App() {
   const onClickSearch = (searchText) => {
@@ -34,6 +38,11 @@ function App() {
   const [orders] = useState({name: 'Órdenes', cant: 45});
   const [raised] = useState({name: 'Recaudado', cant: '$2800'});
   const [products] = useState({name: 'Productos', cant: 57});
+  const headerPurchase = {
+    date: '01/01/2020',
+    hour: '10:19 P.M.',
+    order: 0,
+  };
 
   const Image = styled.img`
     width: 50rem;
@@ -52,11 +61,32 @@ function App() {
     ],
   };
 
+  const [showModal, setShowModal] = useState(false);
+
+  const hideModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <GlobalStyle />
       <div className="App">
+        <HeadearPurchaseReceipt
+          paymentDate={headerPurchase.date}
+          paymentHour={headerPurchase.hour}
+          paymentNumber={headerPurchase.order}
+        />
         <Header />
+
+        <section>
+          <NotificationModal handleClose={() => hideModal()} show={showModal}>
+            <DescriptionPrice>TARJETA APROBADA</DescriptionPrice>
+          </NotificationModal>
+          <button type="button" onClick={() => setShowModal(true)}>
+            Ver modal
+          </button>
+        </section>
+
         <TextAboutUs />
         <Itemspurchasereceipt />
         <ItemsCategoryPurchaseReceipt

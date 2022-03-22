@@ -22,6 +22,7 @@ import HeadearPurchaseReceipt from './molecules/HeadearPurchaseReceipt';
 import { ProductCard } from './molecules/ProductCard';
 import {TotalPurchaseReceipt} from './molecules/TotalPurchaseReceipt';
 import {FooterPurchaseReceipt} from './molecules/FooterPurchaseReceipt';
+import {Itemspurchasereceipt} from './molecules/ItemsPurchaseReceipt';
 import {NotificationModal} from './molecules/NotificationModal';
 import DescriptionPrice from './atoms/DescriptionPrice';
 import IconCheck from './image/IconCheck.svg';
@@ -101,6 +102,7 @@ function App() {
         </section>
 
         <TextAboutUs />
+        <Itemspurchasereceipt />
         <ItemsCategoryPurchaseReceipt
           category={itemPurchase.category}
           products={itemPurchase.products}

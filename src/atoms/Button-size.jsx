@@ -18,8 +18,8 @@ const ButtonXL = styled.button`
   }
 `;
 const ButtonL = styled(ButtonXL)`
-  width: 36.6rem;
-  height: 7.4rem;
+  width: 100%;
+  height: 6.4rem;
   font-size: 2rem;
   font-weight: normal;
   background-color: ${colors.primary};
@@ -28,11 +28,7 @@ const ButtonL = styled(ButtonXL)`
     cursor: ${(props) => (props.opacity ? 'pointer' : 'not-allowed')};
   }
 `;
-const ButtonSize = ({text, size, color, active}) => {
-  const buttonClick = () => {
-    console.log('Do something');
-  };
-
+const ButtonSize = ({text, size, color, active, buttonClick}) => {
   return size === 'xl' ? (
     color === 'primary' ? (
       <ButtonXL primary>{text}</ButtonXL>

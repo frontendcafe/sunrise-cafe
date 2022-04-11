@@ -6,6 +6,7 @@ import NumberFormat from 'react-number-format';
 import {baseInput} from '../styles/Mixins';
 const InputCreditCardVerificationValueStyled = styled(NumberFormat)`
   ${baseInput}
+  text-align: center;
 `;
 
 function InputCreditCardVerificationValue({name, value, setValue}) {
@@ -14,7 +15,6 @@ function InputCreditCardVerificationValue({name, value, setValue}) {
   return (
     <InputCreditCardVerificationValueStyled
       allowNegative={false}
-      className={baseInput}
       decimalSeparator=""
       displayType="input"
       format="###"

@@ -6,13 +6,14 @@ import {baseInput} from '../styles/Mixins';
 
 const InputTextStyled = styled.input`
   ${baseInput}
+  text-align: center;
   text-transform: uppercase;
 `;
 
-function InputText({name, value, setValue}) {
+function InputText({name, value, setValue, className}) {
   return (
     <InputTextStyled
-      className={baseInput}
+      className={className}
       name={name}
       type="text"
       value={value}
@@ -29,6 +30,7 @@ InputText.propTypes = {
   value: PropTypes.string,
   setValue: PropTypes.func,
   name: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default InputText;

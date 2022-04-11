@@ -7,6 +7,7 @@ import {baseInput} from '../styles/Mixins';
 
 const InputNumberStyled = styled(NumberFormat)`
   ${baseInput}
+  text-align: center;
 `;
 
 function InputNumber({name, value, setValue, decimals}) {

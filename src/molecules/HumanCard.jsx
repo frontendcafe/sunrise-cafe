@@ -62,6 +62,14 @@ LinkedIn.defaultProps = {
   src: IconLinkedIn,
 };
 
+function LinkedInConditional(linkedInAddress) {
+  return linkedInAddress ? (
+    <ButtonProfile profileUrl={linkedInAddress} socialMedia={'linkedin'} />
+  ) : (
+    ''
+  );
+}
+
 export const HumanCard = ({photo, name, rol, gitHubAddress, linkedInAddress}) => {
   return (
     <Container>
@@ -72,7 +80,7 @@ export const HumanCard = ({photo, name, rol, gitHubAddress, linkedInAddress}) =>
       <Rol>{rol}</Rol>
       <SocialNetworks>
         <ButtonProfile profileUrl={gitHubAddress} socialMedia={'github'} />
-        <ButtonProfile profileUrl={linkedInAddress} socialMedia={'linkedin'} />
+        {LinkedInConditional(linkedInAddress)}
       </SocialNetworks>
     </Container>
   );

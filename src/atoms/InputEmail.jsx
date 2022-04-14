@@ -1,35 +1,36 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import {baseInput} from '../styles/Mixins';
 
-const InputTextStyled = styled.input`
+const InputEmailStyled = styled.input`
   ${baseInput}
-  text-align: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  text-align: left;
+  font-weight: 500;
+  padding-left: 1rem;
 `;
 
-function InputText({name, value, setValue, className}) {
+function InputEmail({name, value, setValue}) {
   return (
-    <InputTextStyled
-      className={className}
+    <InputEmailStyled
       name={name}
-      type="text"
+      type="email"
       value={value}
       onChange={({target}) => setValue(target.value)}
     />
   );
 }
 
-InputText.defaultProps = {
+InputEmail.defaultProps = {
   value: '',
 };
 
-InputText.propTypes = {
+InputEmail.propTypes = {
   value: PropTypes.string,
   setValue: PropTypes.func,
   name: PropTypes.string,
 };
 
-export default InputText;
+export default InputEmail;

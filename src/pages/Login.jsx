@@ -8,7 +8,7 @@ import HomeImage from '../image/homeImage.svg';
 import BackgroundCoffee from '../image/backgroundCoffee.svg';
 
 const Image = styled.img`
-  width: 50rem;
+  width: 49rem;
 `;
 
 const LayoutLogin = styled.div`

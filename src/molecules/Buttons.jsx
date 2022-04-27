@@ -27,7 +27,6 @@ const Buttons = () => {
       <ButtonSecondary disable={false} text={'Boton'} />
       <ButtonSize color={'primary'} size={'xl'} text={'Ordenar'} />
       <ButtonSize color={'accent'} size={'xl'} text={'Ventas'} />
-      <ButtonSize active={true} color={'primary'} size={'l'} text={'CheckOut'} />
       <ButtonAddToOrder price={'$55'} />
       <ButtonArrowBack price={'$55'} />
       <ButtonCancel />

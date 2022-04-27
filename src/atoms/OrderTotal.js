@@ -7,7 +7,6 @@ const OrderTotals = styled.p`
   font-weight: bold;
   font-size: 2.5rem;
   font-weight: 500;
-  width: 366px;
 `;
 
 export default OrderTotals;

@@ -49,7 +49,7 @@ export const NotificationModal = ({handleClose, show, children}) => {
     return () => {
       clearTimeout(timer);
     };
-  });
+  }, []);
 
   return (
     <Container show={show}>

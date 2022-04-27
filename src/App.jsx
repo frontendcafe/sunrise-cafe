@@ -10,6 +10,7 @@ import {SearchBar} from './molecules/SearchBar';
 import {OrdenItem} from './molecules/OrdenItem';
 import {CommandButtons} from './molecules/CommandButtons';
 import {CashPayment} from './molecules/CashPayment';
+import {HumanCard} from './molecules/HumanCard';
 import VercelInfo from './atoms/VercelInfo';
 import {CardPayment} from './molecules/CardPayment';
 import {TotalSalesDay} from './molecules/TotalSalesDay';
@@ -23,17 +24,11 @@ import {FooterPurchaseReceipt} from './molecules/FooterPurchaseReceipt';
 import {Itemspurchasereceipt} from './molecules/ItemsPurchaseReceipt';
 import {NotificationModal} from './molecules/NotificationModal';
 import DescriptionPrice from './atoms/DescriptionPrice';
-import IconCheck from './image/IconCheck.svg';
 import TeamGrid from './organisms/TeamGrid';
+import {Order} from './organisms/Order';
 
 function App() {
-  const onClickSearch = (searchText) => {
-    console.log(searchText);
-  };
-
-  const handleDeleteItem = () => {
-    console.log('Delete item');
-  };
+  const onClickSearch = () => {};
 
   const [orders] = useState({name: 'Órdenes', cant: 45});
   const [raised] = useState({name: 'Recaudado', cant: '$2800'});
@@ -73,11 +68,44 @@ function App() {
     setShowModal(false);
   };
 
+  const [orderProducts, setOrderProducts] = useState([
+    {
+      id: 0,
+      nota: 'TAMAÑO CHICO',
+      price: 110,
+      subtitle: 'LECHE DE COCO',
+      title: 'Café Mocka',
+      amount: 1,
+    },
+    {
+      id: 1,
+      nota: 'NOTA:',
+      price: 35,
+      subtitle: '',
+      title: 'Crossaint',
+      amount: 3,
+    },
+    {
+      id: 2,
+      nota: 'NOTA: SIN AZÚCAR ENCIMA',
+      price: 90,
+      subtitle: 'CHANTILLY',
+      title: 'Choux',
+      amount: 2,
+    },
+  ]);
+
+  const clearProducts = () => {
+    setOrderProducts([]);
+  };
+
   return (
     <>
       <GlobalStyle />
       <div className="App">
         <TeamGrid />
+        <Header />
+        <Order clearProducts={clearProducts} orderNumber={0} orderProducts={orderProducts} />
         <ProductCard
           image={productData.image}
           price={productData.price}
@@ -89,7 +117,6 @@ function App() {
           paymentHour={headerPurchase.hour}
           paymentNumber={headerPurchase.order}
         />
-        <Header />
 
         <section>
           <NotificationModal handleClose={() => hideModal()} show={showModal}>
@@ -120,6 +147,13 @@ function App() {
           title="Café Mocka"
         />
 
+        <HumanCard
+          gitHubAddress="http://www.google.com"
+          linkedInAddress="http://www.google.com"
+          name="Lupis Ar"
+          photo={LupisImage}
+          rol="UI Designer"
+        />
         <Tipography />
         <Buttons />
         <CommandButtons />

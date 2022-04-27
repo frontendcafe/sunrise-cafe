@@ -11,6 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   gap: 1.2rem;
   width: 15rem;
+  padding: 1rem;
 `;
 
 const ImageContainer = styled.div`
@@ -31,7 +32,7 @@ const Name = styled.span`
   font-style: normal;
   font-weight: 800;
   font-size: 2rem;
-  line-height: 18px;
+  line-height: 0.4rem;
   color: ${colors.primary};
 `;
 

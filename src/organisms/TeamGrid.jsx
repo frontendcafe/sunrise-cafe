@@ -12,6 +12,9 @@ import {HumanCard} from '../molecules/HumanCard';
 
 const Container = styled.div`
   display: flex;
+  width: 55rem;
+  flex-wrap: wrap;
+  align-content: space-between;
 `;
 
 const teamMembers = [
@@ -67,6 +70,10 @@ const teamMembers = [
 ];
 
 export default function TeamGrid() {
+  teamMembers.sort(() => {
+    return 0.5 - Math.random();
+  });
+
   return (
     <Container>
       {teamMembers.map((member, index) => (

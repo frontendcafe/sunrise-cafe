@@ -122,7 +122,6 @@ function Test() {
       <Buttons />
       <CommandButtons />
       <CashPayment />
-      <AppRouter />
       <VercelInfo />
     </>
   );

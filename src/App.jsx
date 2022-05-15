@@ -1,14 +1,14 @@
 import React from 'react';
 
 import GlobalStyle from './styles/GlobalStyle';
-import Login from './pages/Login';
+import AppRouter from './routers/AppRouter';
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <div className="App">
-        <Login />
+        <AppRouter />
       </div>
     </>
   );

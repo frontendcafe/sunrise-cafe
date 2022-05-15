@@ -12,34 +12,24 @@ const Image = styled.img`
 `;
 
 const LayoutLogin = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   background-image: url(${BackgroundCoffee});
   background-repeat: no-repeat;
-  background-position: 110% 40%;
-  background-size: 50% 100%;
+  background-position: 100% 100%;
+  background-size: 100vh 100%;
 `;
 
-const WrapperHeader = styled.div`
-  grid-area: 1 / 1 / 2 / 5;
+const WrapperContent = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 `;
-const WrapperLoginForm = styled.div`
-  grid-area: 2 / 1 / 5 / 3;
-  display: grid;
-  place-items: center;
-`;
-const WrapperImage = styled.div`
-  grid-area: 2 / 3 / 5 / 5;
-  display: grid;
-  place-items: center;
-`;
-const WrapperFooter = styled.div`
-  grid-area: 5 / 1 / 6 / 5;
+
+const Footer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,18 +38,14 @@ const WrapperFooter = styled.div`
 export default function Login() {
   return (
     <LayoutLogin>
-      <WrapperHeader>
-        <Header />
-      </WrapperHeader>
-      <WrapperLoginForm>
+      <Header />
+      <WrapperContent>
         <LoginForm />
-      </WrapperLoginForm>
-      <WrapperImage>
         <Image src={HomeImage} />
-      </WrapperImage>
-      <WrapperFooter>
+      </WrapperContent>
+      <Footer>
         <VercelInfo />
-      </WrapperFooter>
+      </Footer>
     </LayoutLogin>
   );
 }

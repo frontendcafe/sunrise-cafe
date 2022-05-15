@@ -22,11 +22,7 @@ const ButtonAble = styled.button`
   }
 `;
 
-const ButtonSecondary = ({text, disable}) => {
-  const buttonClick = () => {
-    console.log('Do somthing');
-  };
-
+const ButtonSecondary = ({text, disable, buttonClick}) => {
   return disable ? (
     <ButtonAble disabled>{text}</ButtonAble>
   ) : (

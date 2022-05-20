@@ -19,10 +19,10 @@ const NavItem = styled.a`
 export const TopMenu = () => {
   return (
     <Nav>
-      <NavItem href="https://www.google.com">
+      <NavItem href="/about">
         <H3>ACERCA DE</H3>
       </NavItem>
-      <NavItem href="https://www.google.com">
+      <NavItem href="https://frontend.cafe/">
         <H3>FRONTENDCAFE</H3>
       </NavItem>
     </Nav>

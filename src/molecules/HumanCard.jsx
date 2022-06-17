@@ -9,7 +9,7 @@ import ButtonProfile from '../atoms/ButtonProfile';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.1rem;
   width: 15rem;
   padding: 1rem;
 `;
@@ -21,7 +21,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 10rem;
+  width: 9rem;
 `;
 
 const SocialNetworks = styled.div`

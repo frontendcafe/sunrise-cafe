@@ -30,6 +30,7 @@ function cardExpiry(val) {
 
 const InputCreditCardExpiryStyled = styled(NumberFormat)`
   ${baseInput}
+  text-align: center;
 `;
 
 function InputCreditCardExpiry({name, value, setValue}) {

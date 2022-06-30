@@ -9,8 +9,9 @@ import ButtonProfile from '../atoms/ButtonProfile';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.1rem;
   width: 15rem;
+  padding: 1rem;
 `;
 
 const ImageContainer = styled.div`
@@ -20,7 +21,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 10rem;
+  width: 9rem;
 `;
 
 const SocialNetworks = styled.div`
@@ -31,7 +32,7 @@ const Name = styled.span`
   font-style: normal;
   font-weight: 800;
   font-size: 2rem;
-  line-height: 18px;
+  line-height: 0.4rem;
   color: ${colors.primary};
 `;
 
@@ -62,6 +63,14 @@ LinkedIn.defaultProps = {
   src: IconLinkedIn,
 };
 
+function LinkedInConditional(linkedInAddress) {
+  return linkedInAddress ? (
+    <ButtonProfile profileUrl={linkedInAddress} socialMedia={'linkedin'} />
+  ) : (
+    ''
+  );
+}
+
 export const HumanCard = ({photo, name, rol, gitHubAddress, linkedInAddress}) => {
   return (
     <Container>
@@ -72,7 +81,7 @@ export const HumanCard = ({photo, name, rol, gitHubAddress, linkedInAddress}) =>
       <Rol>{rol}</Rol>
       <SocialNetworks>
         <ButtonProfile profileUrl={gitHubAddress} socialMedia={'github'} />
-        <ButtonProfile profileUrl={linkedInAddress} socialMedia={'linkedin'} />
+        {LinkedInConditional(linkedInAddress)}
       </SocialNetworks>
     </Container>
   );

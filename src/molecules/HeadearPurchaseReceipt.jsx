@@ -23,7 +23,7 @@ const FlexContainer = styled.div`
   justify-content: space-between;
 `;
 
-function HeadearPurchaseReceipt({paymentDate, paymentHour, paymentNumber}) {
+export const HeadearPurchaseReceipt = ({paymentDate, paymentHour, paymentNumber}) => {
   return (
     <>
       <HeaderOneDouble>Recibo</HeaderOneDouble>
@@ -36,6 +36,6 @@ function HeadearPurchaseReceipt({paymentDate, paymentHour, paymentNumber}) {
       </FlexContainer>
     </>
   );
-}
+};
 
-export default HeadearPurchaseReceipt;
+// export default HeadearPurchaseReceipt;

@@ -15,7 +15,6 @@ import {CardPayment} from '../molecules/CardPayment';
 import {TotalSalesDay} from '../molecules/TotalSalesDay';
 import TextAboutUs from '../molecules/TextAboutUs';
 import HomeImage from '../image/homeImage.svg';
-import {ItemsCategoryPurchaseReceipt} from '../molecules/ItemsCategoryPurchaseReceipt';
 import {ProductCard} from '../molecules/ProductCard';
 import {NotificationModal} from '../molecules/NotificationModal';
 import DescriptionPrice from '../atoms/DescriptionPrice';
@@ -65,11 +64,6 @@ function Test() {
       </section>
 
       <TextAboutUs />
-
-      <ItemsCategoryPurchaseReceipt
-        category={itemPurchase.category}
-        products={itemPurchase.products}
-      />
 
       <Image src={HomeImage} />
       <TotalSalesDay orders={orders} products={products} raised={raised} />

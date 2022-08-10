@@ -2,6 +2,7 @@ import React from 'react';
 
 import {HeadearPurchaseReceipt} from '../molecules/HeadearPurchaseReceipt';
 import {Itemspurchasereceipt} from '../molecules/ItemsPurchaseReceipt';
+import {ItemsCategoryPurchaseReceipt} from '../molecules/ItemsCategoryPurchaseReceipt';
 import {TotalPurchaseReceipt} from '../molecules/TotalPurchaseReceipt';
 import {FooterPurchaseReceipt} from '../molecules/FooterPurchaseReceipt';
 
@@ -32,8 +33,11 @@ const Order = () => {
         paymentHour={headerPurchase.hour}
         paymentNumber={headerPurchase.order}
       />
-      <Itemspurchasereceipt />
       <Itemspurchasereceipt category={itemPurchase.category} products={itemPurchase.products} />
+      <ItemsCategoryPurchaseReceipt
+        category={itemPurchase.category}
+        products={itemPurchase.products}
+      />
       <TotalPurchaseReceipt paymentMethod={purchase.paymentMethod} total={purchase.total} />
       <FooterPurchaseReceipt />
     </>

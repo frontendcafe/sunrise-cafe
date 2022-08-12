@@ -9,6 +9,7 @@ export const FooterPurchaseReceipt = () => {
     margin: 2rem 0;
     display: flex;
     align-items: center;
+    padding: 1.9rem 0;
   `;
 
   const Circle = styled.div`

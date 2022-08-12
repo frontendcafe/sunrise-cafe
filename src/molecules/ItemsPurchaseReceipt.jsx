@@ -15,6 +15,7 @@ export const Itemspurchasereceipt = () => {
   };
 
   const Wrapper = styled.div`
+    font-size: 2.2rem;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
     border-bottom: 1px solid ${colors.dark};

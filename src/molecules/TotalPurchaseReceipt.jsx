@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import colors from '../styles/colors';
-import H1 from '../atoms/H1';
 import Link from '../atoms/Link';
 
 export const TotalPurchaseReceipt = ({paymentMethod, total}) => {
@@ -15,6 +14,11 @@ export const TotalPurchaseReceipt = ({paymentMethod, total}) => {
     text-align: right;
     font-size: 1.5rem;
   `;
+  const Sum = styled.div`
+    font-weight: bold;
+    font-size: 5.4rem;
+    padding: 0.8rem 0;
+  `;
 
   const Separator = styled.hr`
     border: 2px solid ${colors.dark};
@@ -23,6 +27,9 @@ export const TotalPurchaseReceipt = ({paymentMethod, total}) => {
   const Info = styled.div`
     display: flex;
     justify-content: space-between;
+  `;
+  const Spread = styled.div`
+    padding: 0.7rem 0;
   `;
 
   const Payment = styled.div`
@@ -39,10 +46,15 @@ export const TotalPurchaseReceipt = ({paymentMethod, total}) => {
       <Separator />
       <Info>
         <Payment>
-          <Link>Forma De Pago</Link>
-          <Link>{paymentMethod}</Link>
+          <Spread>
+            <Link>Forma De Pago</Link>
+          </Spread>
+          <Spread>
+            {' '}
+            <Link>{paymentMethod}</Link>
+          </Spread>
         </Payment>
-        <H1>${total}</H1>
+        <Sum>${parseFloat(total, 10).toFixed(2)}</Sum>
       </Info>
       <Separator />
     </Container>

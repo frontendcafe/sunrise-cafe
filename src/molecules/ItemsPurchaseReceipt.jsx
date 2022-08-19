@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import colors from '../styles/colors';
-import { ItemsCategoryPurchaseReceipt } from './ItemsCategoryPurchaseReceipt';
 
-export const Itemspurchasereceipt = () => {  
+import colors from '../styles/colors';
+
+import {ItemsCategoryPurchaseReceipt} from './ItemsCategoryPurchaseReceipt';
+
+export const Itemspurchasereceipt = () => {
   const itemPurchase = {
     category: 'Panadería',
     products: [
@@ -13,42 +15,42 @@ export const Itemspurchasereceipt = () => {
   };
 
   const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  border-bottom: 1px solid ${colors.dark};
-  margin-bottom: 1rem;
-  padding: 0.4rem 0;
+    font-size: 2.2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    border-bottom: 1px solid ${colors.dark};
+    margin-bottom: 1rem;
+    padding: 0.4rem 0;
   `;
 
-  const Description = styled.p` 
-  font-weight: bold;
-  margin: 0.2rem;
+  const Description = styled.p`
+    font-weight: bold;
+    margin: 0.2rem;
   `;
 
-  const Price = styled.p` 
-  font-weight: bold;
-  margin: 0.2rem;
-  text-align: right;
+  const Price = styled.p`
+    font-weight: bold;
+    margin: 0.2rem;
+    text-align: right;
   `;
 
   const Quantity = styled.p`
-  font-weight: bold;
-  margin: 0.2rem;
-  text-align: right;
+    font-weight: bold;
+    margin: 0.2rem;
+    text-align: right;
   `;
 
   return (
-   <>
-     <Wrapper>
+    <>
+      <Wrapper>
         <Description>Descripción</Description>
         <Quantity>Cantidad</Quantity>
         <Price>Precio</Price>
-     </Wrapper> 
-     <ItemsCategoryPurchaseReceipt
-          category={itemPurchase.category}
-          products={itemPurchase.products}
-     />
-  </>
+      </Wrapper>
+      <ItemsCategoryPurchaseReceipt
+        category={itemPurchase.category}
+        products={itemPurchase.products}
+      />
+    </>
   );
-}
-
+};

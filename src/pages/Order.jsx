@@ -5,6 +5,7 @@ import {Itemspurchasereceipt} from '../molecules/ItemsPurchaseReceipt';
 import {ItemsCategoryPurchaseReceipt} from '../molecules/ItemsCategoryPurchaseReceipt';
 import {TotalPurchaseReceipt} from '../molecules/TotalPurchaseReceipt';
 import {FooterPurchaseReceipt} from '../molecules/FooterPurchaseReceipt';
+import ChoosePayment from '../molecules/ChoosePayment';
 
 const headerPurchase = {
   date: '01/04/2023',
@@ -28,6 +29,7 @@ const purchase = {
 const Order = () => {
   return (
     <>
+      <ChoosePayment />
       <HeadearPurchaseReceipt
         paymentDate={headerPurchase.date}
         paymentHour={headerPurchase.hour}

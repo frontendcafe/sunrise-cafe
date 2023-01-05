@@ -8,6 +8,7 @@ import {baseInput} from '../styles/Mixins';
 const InputCreditCardNumberStyled = styled(NumberFormat)`
   ${baseInput}
   text-align: center;
+  width: 18em;
 `;
 
 function InputCreditCardNumber({name, value, setValue}) {

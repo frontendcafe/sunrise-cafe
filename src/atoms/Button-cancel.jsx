@@ -6,7 +6,7 @@ import colors from '../styles/colors';
 const Button = styled.button`
   width: 8.5rem;
   height: 6.4rem;
-  background-color: white; //Cambio para diseño actual, no hay fondo
+  background-color: ${colors.light}; //Cambio para diseño actual, no hay fondo
   border-color: ${colors.primary};
   border-radius: 1.3rem;
   color: ${colors.primary};

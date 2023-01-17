@@ -11,7 +11,6 @@ import InputCreditCardVerificationValue from '../atoms/InputCreditCardVerificati
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  // margin-bottom: 2rem;
 `;
 const SpaceContainer = styled.div`
   margin: 1.5rem 0;
@@ -19,7 +18,6 @@ const SpaceContainer = styled.div`
 
 const ExpirationCVV = styled.div`
   display: flex;
-  // justify-content: space-between;
   gap: 16rem;
 `;
 

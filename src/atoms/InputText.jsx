@@ -8,6 +8,7 @@ const InputTextStyled = styled.input`
   ${baseInput}
   text-align: center;
   text-transform: uppercase;
+  width: 18em;
 `;
 
 function InputText({name, value, setValue, className}) {

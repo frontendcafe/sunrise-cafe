@@ -11,13 +11,14 @@ import InputCreditCardVerificationValue from '../atoms/InputCreditCardVerificati
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+`;
+const SpaceContainer = styled.div`
+  margin: 1.5rem 0;
 `;
 
 const ExpirationCVV = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 12rem;
+  gap: 16rem;
 `;
 
 export const CardPayment = () => {
@@ -29,37 +30,43 @@ export const CardPayment = () => {
 
   return (
     <Container>
-      <InputField>
-        <Label>Nombre</Label>
-        <InputText name="name" setValue={setName} value={name} />
-      </InputField>
-      <InputField>
-        <Label>Número De Tarjeta</Label>
-        <InputCreditCardNumber
-          name="creditCardNumber"
-          setValue={setCreditCardNumber}
-          value={creditCardNumber}
-        />
-      </InputField>
+      <SpaceContainer>
+        <InputField>
+          <Label>Nombre</Label>
+          <InputText name="name" setValue={setName} value={name} />
+        </InputField>
+      </SpaceContainer>
+      <SpaceContainer>
+        <InputField>
+          <Label>Número De Tarjeta</Label>
+          <InputCreditCardNumber
+            name="creditCardNumber"
+            setValue={setCreditCardNumber}
+            value={creditCardNumber}
+          />
+        </InputField>
+      </SpaceContainer>
 
-      <ExpirationCVV>
-        <InputField>
-          <Label>Expira</Label>
-          <InputCreditCardExpiry
-            name="creditCardExpiry"
-            setValue={setCreditCardExpiry}
-            value={creditCardExpiry}
-          />
-        </InputField>
-        <InputField>
-          <Label>CVV</Label>
-          <InputCreditCardVerificationValue
-            name="creditCardVerificationValue"
-            setValue={setCreditCardVerificationValue}
-            value={creditCardVerificationValue}
-          />
-        </InputField>
-      </ExpirationCVV>
+      <SpaceContainer>
+        <ExpirationCVV>
+          <InputField>
+            <Label>Expira</Label>
+            <InputCreditCardExpiry
+              name="creditCardExpiry"
+              setValue={setCreditCardExpiry}
+              value={creditCardExpiry}
+            />
+          </InputField>
+          <InputField>
+            <Label>CVV</Label>
+            <InputCreditCardVerificationValue
+              name="creditCardVerificationValue"
+              setValue={setCreditCardVerificationValue}
+              value={creditCardVerificationValue}
+            />
+          </InputField>
+        </ExpirationCVV>
+      </SpaceContainer>
     </Container>
   );
 };

@@ -6,9 +6,9 @@ import IconCoffee from '../image/IconCoffee.svg';
 
 const Logo = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem
 `;
 
 const LogoIcon = styled.img`

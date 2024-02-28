@@ -23,6 +23,14 @@ export const LoginForm = (className) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  function handleSubmit(){
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(!emailRegex.test(email)) {
+      console.log("No ingresaste un email correcto");
+    }
+  }
+
   return (
     <Container className={className}>
       <InputField>
@@ -33,7 +41,10 @@ export const LoginForm = (className) => {
         <Label>Password</Label>
         <InputPassword name="password" setValue={setPassword} value={password} />
       </InputField>
-      <LoginButtonStyled disable={false} text={'Ingresar'} />
+      
+
+      <LoginButtonStyled disable={false} text={'Ingresar'} typeOfButton={`submit`} onSubmit={handleSubmit}/>
+  
     </Container>
   );
 };

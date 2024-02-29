@@ -41,7 +41,7 @@ export default function ChoosePayment() {
 
       <SubHeaderSection>
         <ButtonSecondary text={'cancelar'} />
-        <ButtonPrimary text={'pagar'} />
+        <ButtonPrimary text={'pagar'} handleClick={() => console.log("payment")} />
       </SubHeaderSection>
       {/* <Buttons /> */}
     </>

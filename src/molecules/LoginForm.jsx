@@ -23,30 +23,16 @@ export const LoginForm = (className) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function validateEmail(emailToValidate){
+  function handleSubmit(){
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(!emailRegex.test(emailToValidate)) {
-      console.log("El email debe contener un @ y .com");
+
+    if(!emailRegex.test(email)) {
+      console.log("No ingresaste un email correcto");
     }
   }
 
-function validatePassword(passwordToValidate){
-  const passwordRegex = /[0-9]/
-  if(passwordToValidate.length < 5 && (typeof passwordToValidate == `string` || !passwordRegex.test(passwordToValidate))){
-    console.log("La contraseña debe tener al menos 5 caracteres y un numero")
-  }
-}
-
-  function handleClick(){
-      event.preventDefault()
-      validateEmail(email)
-      validatePassword(password)
-  }
-
   return (
-    
     <Container className={className}>
-      <form>
       <InputField>
         <Label>Email</Label>
         <InputEmail name="email" setValue={setEmail} value={email} />
@@ -57,8 +43,7 @@ function validatePassword(passwordToValidate){
       </InputField>
       
 
-      <LoginButtonStyled disable={false} text={'Ingresar'} typeOfButton={`submit`} handleClick={handleClick}/>
-    </form>
+      <LoginButtonStyled disable={false} text={'Ingresar'} typeOfButton={`submit`} onSubmit={handleSubmit}/>
   
     </Container>
   );

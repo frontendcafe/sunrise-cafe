@@ -41,6 +41,9 @@ const Footer = styled.div`
   margin: 2rem 0;
 `;
 
+const prueba = () =>{
+  alert("Lo conseguiste, compraste")
+}
 
 export const Order = ({orderNumber, orderProducts, clearProducts}) => {
   const handleDeleteItem = () => {};

@@ -41,10 +41,6 @@ const Footer = styled.div`
   margin: 2rem 0;
 `;
 
-const prueba = () =>{
-  alert("Lo conseguiste, compraste")
-}
-
 export const Order = ({orderNumber, orderProducts, clearProducts}) => {
   const handleDeleteItem = () => {};
 
@@ -54,7 +50,7 @@ export const Order = ({orderNumber, orderProducts, clearProducts}) => {
     <Container>
       <Header>
         <H2>Orden N. {orderNumber}</H2>
-        <ButtonSecondary buttonClick={clearProducts()} disable={false} text={'Vaciar'} />
+        <ButtonSecondary buttonClick={() => clearProducts()} disable={false} text={'Vaciar'} />
       </Header>
 
       <Items>

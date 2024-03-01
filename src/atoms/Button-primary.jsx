@@ -21,7 +21,7 @@ const ButtonAble = styled.button`
     cursor: not-allowed;
   }
 `;
-const ButtonPrimary = ({text, disable, className, typeOfButton, onSubmit}) => {
+const ButtonPrimary = ({text, disable, className}) => {
   const buttonClick = () => {
     console.log('Do something');
   };
@@ -31,7 +31,7 @@ const ButtonPrimary = ({text, disable, className, typeOfButton, onSubmit}) => {
       {text}
     </ButtonAble>
   ) : (
-    <ButtonAble className={className} onClick={() => buttonClick()} type={typeOfButton} onSubmit={() => onSubmit()}>
+    <ButtonAble className={className} onClick={() => buttonClick()}>
       {text}
     </ButtonAble>
   );

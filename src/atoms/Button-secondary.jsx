@@ -26,7 +26,7 @@ const ButtonSecondary = ({text, disable, buttonClick}) => {
   return disable ? (
     <ButtonAble disabled>{text}</ButtonAble>
   ) : (
-    <ButtonAble onClick={buttonClick}>{text}</ButtonAble>
+    <ButtonAble onClick={() => buttonClick()}>{text}</ButtonAble>
   );
 };
 

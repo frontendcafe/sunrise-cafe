@@ -21,10 +21,6 @@ const SubHeaderSection = styled.div`
 `;
 
 export default function ChoosePayment() {
-  function handleClick(){
-    console.log("payment")
-  }
-
   return (
     <>
       <HeaderSection>
@@ -33,7 +29,7 @@ export default function ChoosePayment() {
       </HeaderSection>
 
       <SubHeaderSection>
-        <ButtonSecondary text={'tarjeta'} buttonClick={() => handleClick()}/>
+        <ButtonSecondary text={'tarjeta'} />
         <ButtonSecondary text={'efectivo'} />
       </SubHeaderSection>
 

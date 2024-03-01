@@ -8,17 +8,15 @@ import {TopMenu} from './TopMenu';
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0 2rem;
 `;
 
 export const Header = () => {
   return (
-    <>
     <Container>
       <CoffeeBanner />
       <TopMenu />
     </Container>
-    </>
   );
 };

@@ -8,7 +8,7 @@ import {TopMenu} from './TopMenu';
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 2rem;
 `;
 

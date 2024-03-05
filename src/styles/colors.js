@@ -7,6 +7,7 @@ const wordsColor = {
   negro: '#000',
   gris: '#C5C5C5',
   marron: '#5E3E00',
+  rojo: `#fc0339`,
 };
 
 export default {
@@ -18,4 +19,5 @@ export default {
   accent_brown: wordsColor.marron,
   blue: wordsColor.azul,
   gray: wordsColor.gris,
+  red: wordsColor.rojo,
 };

@@ -6,7 +6,7 @@ import Label from '../atoms/Label';
 import ButtonPrimary from '../atoms/Button-primary';
 import InputEmail from '../atoms/InputEmail';
 import InputPassword from '../atoms/InputPassword';
-import {ErrorP} from '../atoms/p';
+import {ErrorParagraph} from '../atoms/p';
 
 const Container = styled.div`
   display: flex;
@@ -66,7 +66,7 @@ export const LoginForm = (className) => {
             value={email}
           />
         </InputField>
-        {emailError.length > 0 ? <ErrorP>{emailError}</ErrorP> : <></>}
+        {emailError.length > 0 ? <ErrorParagraph>{emailError}</ErrorParagraph> : <></>}
         <InputField>
           <Label>Password</Label>
           <InputPassword
@@ -76,7 +76,7 @@ export const LoginForm = (className) => {
             value={password}
           />
         </InputField>
-        {passwordError.length > 0 ? <ErrorP>{passwordError}</ErrorP> : <></>}
+        {passwordError.length > 0 ? <ErrorParagraph>{passwordError}</ErrorParagraph> : <></>}
         <LoginButtonStyled
           disable={false}
           handleClick={(event) => handleClick(event)}

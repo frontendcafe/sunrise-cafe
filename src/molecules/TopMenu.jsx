@@ -6,8 +6,9 @@ import H3 from '../atoms/H3';
 const Nav = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  // justify-content: space-between;
+  gap: 5rem;
+  grid-area: nav;
 `;
 
 const NavItem = styled.a`

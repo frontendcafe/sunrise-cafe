@@ -26,36 +26,44 @@ export const LoginForm = (className) => {
   const [emailError, setEmailError] = useState(``);
   const [passwordError, setPasswordError] = useState(``);
 
-  function validateEmail(emailToValidate) {
+  function isEmailValid(emailEvaluate) {
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (!emailRegex.test(emailToValidate)) {
+    return emailRegex.test(emailEvaluate);
+  }
+
+  function validateEmail(emailToValidate) {
+    if (!isEmailValid(emailToValidate)) {
       setEmailError(`Asegurese de colocar un email correcto`);
     } else {
       setEmailError(``);
     }
   }
 
-  function validatePassword(passwordToValidate) {
+  function isPasswordValid(passwordToEvaluate) {
     const passwordRegex = /^(?=.*\d).{5,}$/;
 
-    if (!passwordRegex.test(passwordToValidate)) {
+    return passwordRegex.test(passwordToEvaluate);
+  }
+
+  function validatePassword(passwordToValidate) {
+    if (!isPasswordValid(passwordToValidate)) {
       setPasswordError(`Asegurese de que su contraseña tenga al menos 5 caracteres y un numero`);
     } else {
       setPasswordError(``);
     }
   }
 
-  function handleClick(event) {
+  function handleSubmit(event) {
     validateEmail(email);
     validatePassword(password);
-    if (passwordError.length == 0 || emailError.length == 0) {
+    if (!isPasswordValid(password) || !isEmailValid(email)) {
       event.preventDefault();
     }
   }
 
   return (
-    <Container className={className}>
+    <Container className={className} onSubmit={(event) => handleSubmit(event)}>
       <form action="/" method="get">
         <InputField>
           <Label>Email</Label>
@@ -77,12 +85,7 @@ export const LoginForm = (className) => {
           />
         </InputField>
         {passwordError.length > 0 ? <ErrorParagraph>{passwordError}</ErrorParagraph> : <></>}
-        <LoginButtonStyled
-          disable={false}
-          handleClick={(event) => handleClick(event)}
-          text={'Ingresar'}
-          typeOfButton={'submit'}
-        />
+        <LoginButtonStyled disable={false} text={'Ingresar'} typeOfButton={'submit'} />
       </form>
     </Container>
   );

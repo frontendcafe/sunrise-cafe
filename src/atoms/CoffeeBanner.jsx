@@ -7,8 +7,8 @@ import IconCoffee from '../image/IconCoffee.svg';
 const Logo = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   gap: 1rem;
+  grid-area: banner;
 `;
 
 const LogoIcon = styled.img`

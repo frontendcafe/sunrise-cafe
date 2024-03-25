@@ -6,10 +6,9 @@ import {CoffeeBanner} from '../atoms/CoffeeBanner';
 import {TopMenu} from './TopMenu';
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 5% 35% 30% 30%;
+  grid-template-areas: 'blank banner separator nav';
 `;
 
 export const Header = () => {

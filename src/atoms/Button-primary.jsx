@@ -21,17 +21,13 @@ const ButtonAble = styled.button`
     cursor: not-allowed;
   }
 `;
-const ButtonPrimary = ({text, disable, className}) => {
-  const buttonClick = () => {
-    console.log('Do something');
-  };
-
+const ButtonPrimary = ({text, disable, className, typeOfButton, handleClick}) => {
   return disable ? (
     <ButtonAble disabled className={className}>
       {text}
     </ButtonAble>
   ) : (
-    <ButtonAble className={className} onClick={() => buttonClick()}>
+    <ButtonAble className={className} type={typeOfButton} onClick={handleClick}>
       {text}
     </ButtonAble>
   );

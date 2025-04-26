@@ -21,6 +21,12 @@ const SubHeaderSection = styled.div`
 `;
 
 export default function ChoosePayment() {
+  // TODO: Implementar la lógica para manejar al accion de pagar
+  function handleClick() {
+    // aquí iría la lógica
+    
+  }
+
   return (
     <>
       <HeaderSection>
@@ -29,7 +35,7 @@ export default function ChoosePayment() {
       </HeaderSection>
 
       <SubHeaderSection>
-        <ButtonSecondary text={'tarjeta'} />
+        <ButtonSecondary buttonClick={() => handleClick()} text={'tarjeta'} />
         <ButtonSecondary text={'efectivo'} />
       </SubHeaderSection>
 

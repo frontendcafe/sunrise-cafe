@@ -12,10 +12,11 @@ const InputEmailStyled = styled.input`
   padding-left: 1rem;
 `;
 
-function InputEmail({name, value, setValue}) {
+function InputEmail({name, value, setValue, placeholder}) {
   return (
     <InputEmailStyled
       name={name}
+      placeholder={placeholder}
       type="email"
       value={value}
       onChange={({target}) => setValue(target.value)}

@@ -7,6 +7,7 @@ import {mediaMinwidth} from '../styles/utils/helpers';
 
 const Logo = styled.div`
   display: flex;
+
   align-items: center;
   gap: 1rem;
   ${H1} {

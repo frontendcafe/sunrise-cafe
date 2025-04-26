@@ -63,15 +63,17 @@ function IconPassword({isVisible, setIsVisible}) {
   );
 }
 
-function InputPassword({name, value, setValue}) {
+function InputPassword({name, value, setValue, placeholder, handleBlur}) {
   const [isVisible, setIsVisible] = React.useState(false);
 
   return (
     <WrapperPassword>
       <InputPasswordStyled
         name={name}
+        placeholder={placeholder}
         type={isVisible ? 'text' : 'password'}
         value={value}
+        onBlur={handleBlur}
         onChange={({target}) => setValue(target.value)}
       />
       <IconPassword isVisible={isVisible} setIsVisible={setIsVisible} />
